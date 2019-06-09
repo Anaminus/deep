@@ -108,9 +108,9 @@ func (s *compareState) append(x, y interface{}) {
 // Comparer. Generally, Equal is similar to reflect.Equal. Aside from the
 // configurable options, there are several other differences:
 //
-// - NaN is equivalent to NaN.
-// - Because of quirks with maps, maps containing NaN keys can be reported
-//   incorrectly.
+//     - NaN is equivalent to NaN.
+//     - Because of quirks with maps, maps containing NaN keys can be reported
+//       incorrectly.
 func (c Comparer) Equal(x, y interface{}) []Diff {
 	if x == nil && y == nil {
 		return nil
